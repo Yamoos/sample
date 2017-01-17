@@ -16,6 +16,11 @@ RSpec.feature "Проверка есть ли заголовок" do
 		visit 'static_page/about'
 		expect(page).to have_content('About us')
 	end
+
+	scenario "'Contact' на страниуе contact" do
+		visit 'static_page/contact'
+		expect(page).to have_content('Contact')
+	end
   
 
 end
@@ -35,6 +40,11 @@ RSpec.feature "Проверка есть ли <titel>" do
 	scenario "....| About на страниуе home" do
 		visit 'static_page/about'
 		expect(page).to have_title("About")
+	end
+
+	scenario "....| Contact на страниуе home" do
+		visit 'static_page/contact'
+		expect(page).to have_title("Contact")
 	end
 
 end
