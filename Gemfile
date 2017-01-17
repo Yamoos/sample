@@ -40,6 +40,8 @@ group :development, :test do
 end
 
 group :development do
+  gem 'selenium-webdriver'
+  gem 'capybara'
   gem 'sqlite3'
   gem 'rspec-rails'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
@@ -50,10 +52,6 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-group :test do
-  gem 'selenium-webdriver'
-  gem 'capybara'
-end
 group :production do
   gem 'pg'
   gem 'rails_12factor'

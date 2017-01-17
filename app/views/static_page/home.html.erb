@@ -1,2 +1,11 @@
-<h1>StaticPage#home</h1>
-<p>Find me in app/views/static_page/home.html.erb</p>
+<% provide(:title, 'Home') %>
+
+<h1>HOME</h1>
+<p>
+  This is the home page for the  sample app
+  <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
+  sample application.
+</p>
+<p><%= link_to 'help', static_page_help_path %></p>
+<p><%= link_to 'about', static_page_about_path %></p>
+
