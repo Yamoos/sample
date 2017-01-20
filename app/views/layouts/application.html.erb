@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title> RoR | <%= yield(:title) %></title>
+    <title><%= full_title(yield(:title)) %></title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,9 +9,10 @@
   </head>
 
   <body>
+    <%= render 'layouts/header' %>
 	  <div class="container">
 	    <%= yield %>
-	    <p><%= link_to 'home', static_page_home_path %></p>
+      <%= render 'layouts/footer' %>
 	  </div>
   </body>
 </html>
